@@ -8,13 +8,8 @@ export function LoginButton(){
 
     const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&scope=${encodeURIComponent(scopes)}&response_type=${responseType}`;
     return (
-        <button onClick={() => {
-            console.log('Click en login');
-            console.log(authUrl)
-            window.location.assign = authUrl;
-            }}>
-            Iniciar sesión con Spotify
-        </button>
-
+        <a href={authUrl}>
+        <button>Iniciar sesión con Spotify</button>
+        </a>
     );
 }
