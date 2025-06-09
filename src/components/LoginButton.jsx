@@ -10,7 +10,8 @@ export function LoginButton(){
     return (
         <button onClick={() => {
             console.log('Click en login');
-            window.location.href = authUrl;
+            console.log(authUrl)
+            window.location.assign = authUrl;
             }}>
             Iniciar sesión con Spotify
         </button>
